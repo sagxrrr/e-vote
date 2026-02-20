@@ -432,5 +432,5 @@ def show_election():
     return render_template('show_election.html', elections=elections)
 
 # ==========RUN APP==========
-if __name__ == "__main__":
-    app.run(debug=False)
+
+    
