@@ -14,13 +14,13 @@ app.secret_key = os.urandom(20)
 # ----------------------------
 def get_db_connection():
     conn = psycopg2.connect(
-    host="localhost",
-    database="e-voting-system",
-    user="postgres",  # PostgreSQL username
-    password="postgre",  # PostgreSQL user password
-    port=5432,
+    os.environ.get("DATABASE_URL"))
+    # database="e-voting-system",
+    # user="postgres",  # PostgreSQL username
+    # password="postgre",  # PostgreSQL user password
+    # port=5432,
     cursor_factory=RealDictCursor
-    )
+    
     return conn
 
 # ----------------------------
