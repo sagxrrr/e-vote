@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DigiVote | User Home</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="/static/css/user.css">
+
+    <!-- Icons (Font Awesome) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+    <div class="nav-left">
+        <span class="welcome">Welcome, User</span>
+    </div>
+
+    <div class="nav-center">
+        <!-- <img src="" alt="DigiVote Logo" class="logo"> -->
+        <span class="brand">DigiVote</span>
+        <!-- ↑ logo.png ऐवजी तुझा symbol/image दे -->
+    </div>
+
+    <div class="nav-right">
+        <div class="menu-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="dropdown" id="dropdownMenu">
+            <a href="/logout_user" class="logout-link">Logout</a> <!-- logout link इथे add कर -->
+        </div>
+    </div>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content">
+    <!-- Election Name Upload Area -->
+    <section class="election-box" >
+        <h2>Current Elections</h2>
+    {% for e in elections%}
+        <h3>{{e[0]}}</h3>
+    {%endfor%}
+    </section>
+
+    <!-- Latest Updates -->
+    <section class="updates">
+        <marquee behavior="scroll" direction="left">
+            <!-- Admin latest update text इथे टाकेल -->
+            Latest Update: Voting will be conducted at 9 AM to 5 pm | मतदारांनी ओळखपत्र आणणे आवश्यक आहे
+        </marquee>
+    </section>
+
+    <!-- Vote Button -->
+    <section class="vote-section">
+        <button class="vote-btn" onclick="window.location.href='/vote_page'">
+            Vote Now
+        </button>
+        
+    </section>
+
+    <div class="vote-guide-container">
+
+    <h1 class="main-title">🗳️ मतदान सूचना</h1>
+
+    <div class="guide-card">
+        <h2>✅ मतदान करण्यापूर्वी</h2>
+        <ul>
+            <li>योग्य निवडणूक निवडली आहे याची खात्री करा.</li>
+            <li>मतदान सुरू व समाप्तीची वेळ तपासा.</li>
+            <li>आपली वैयक्तिक माहिती योग्य आहे का ते पहा.</li>
+        </ul>
+    </div>
+
+    <div class="guide-card">
+        <h2>🖱️ मतदान करताना</h2>
+        <ul>
+            <li>उमेदवाराचे नाव व चिन्ह नीट तपासा.</li>
+            <li>Confirm करण्यापूर्वी निवड पुन्हा एकदा पाहा.</li>
+            <li>मतदान करताना पेज Refresh करू नका.</li>
+            <li>Back बटण वापरणे टाळा.</li>
+        </ul>
+    </div>
+
+    <div class="guide-card">
+        <h2>⚠️ तांत्रिक सूचना</h2>
+        <ul>
+            <li>इंटरनेट कनेक्शन स्थिर असावे.</li>
+            <li>एकाच वेळी दोन डिव्हाइसवर लॉगिन करू नका.</li>
+            <li>सार्वजनिक संगणकावर मतदान केल्यास Logout करा.</li>
+        </ul>
+    </div>
+
+    <div class="guide-card">
+        <h2>🔒 जबाबदारीची जाणीव</h2>
+        <ul>
+            <li>योग्य उमेदवाराची निवड करा.</li>
+            <li>इतरांच्या दबावाखाली मतदान करू नका.</li>
+            <li>मतदान प्रक्रियेचा गैरवापर टाळा.</li>
+        </ul>
+    </div>
+
+</div>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <p>📞 Contact: 8767414091</p>
+    <p>📧 Support: teamdigivote@gmail.com</p>
+
+    <div class="social-icons">
+        <!-- 🔗 इथे respective social media links दे -->
+        <a target="_blank" href="https://www.instagram.com/sagxrrr_07?igsh=MXFjbTJnZmNibzMyOA=="><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.facebook.com/share/16obAVUBGH/"><i class="fab fa-facebook"></i></a>
+        <a target="_blank" href="https://x.com/adi_9322?s=09"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+<!-- JS Link -->
+<script src="/static/js/user.js"></script>
+</body>
+</html>

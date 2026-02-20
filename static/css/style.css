@@ -1,0 +1,275 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===== BODY BACKGROUND ===== */
+body{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height:100vh;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background: linear-gradient(90deg,#ff9933,#ffffff,#138808);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    z-index:1000;
+}
+
+.logo-icon{
+    font-size:22px;
+    font-weight:600;
+    color:#000;
+}
+
+.nav-links a{
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:500;
+    color:#000;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#ff5722;
+}
+
+/* Toggle icon */
+.menu-icon-right{
+    font-size:24px;
+    cursor:pointer;
+    color:#000;
+}
+
+/* ================= SIDEBAR (RIGHT SIDE) ================= */
+
+#sidebar{
+    position:fixed;
+    top:0;
+    right:-250px;   /* hidden */
+    width:250px;
+    height:100vh;
+    background:linear-gradient(180deg,#1c1c1c,#2c3e50);
+    padding-top:90px;
+    transition:0.4s ease;
+    box-shadow:-5px 0 20px rgba(0,0,0,0.5);
+    z-index:999;
+}
+
+#sidebar a{
+    display:block;
+    padding:15px 25px;
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+#sidebar a:hover{
+    background:rgba(255,153,51,0.4);
+    padding-left:35px;
+}
+
+/* active class */
+#sidebar.active{
+    right:0;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content{
+    margin-top:100px;
+    padding:40px;
+    text-align:center;
+}
+
+.main-content h1{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+/* ================= BOXES ================= */
+
+.box-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.info-box{
+    width:260px;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    transition:0.4s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.info-box a{
+    text-decoration:none;
+    color:white;
+}
+
+.info-box h3{
+    color: #ff9933;
+    font-size: 22px;
+}
+
+.info-box:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255,153,51,0.6);
+}
+
+/* ================= MARQUEE ================= */
+
+.marquee-container{
+    margin:10px auto;
+    padding:10px;
+    width:80%;
+    border-radius:10px;
+    background:linear-gradient(90deg,#ff9933,#ffffff,#138808);
+    color:#000;
+    font-weight:600;
+}
+
+/* ================= INSTRUCTION CARDS ================= */
+
+.user-instruction{
+    margin-top:50px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:25px;
+    text-align:left;
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+.card ul li{
+    margin-bottom:8px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    margin-top:50px;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:linear-gradient(90deg,#ff9933,#ffffff,#138808);
+    color:#000;
+}
+
+.footer a{
+    color:#000;
+    margin:0 10px;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.footer a:hover{
+    color:#ff5722;
+}
+
+/* ===========whatsapp button============= */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    left: 25px;   /* 👈 Right chya aivaji Left */
+    background-color: #25D366;  /* Official WhatsApp Green */
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+    animation: floatMove 3s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(255,153,51,0.6);
+}
+
+@keyframes floatMove {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(6px, -8px);
+    }
+    50% {
+        transform: translate(-6px, -14px);
+    }
+    75% {
+        transform: translate(6px, -8px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.thank-you-msg {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 120px;
+    
+    color:#ff6a00;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

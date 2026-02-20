@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> add election</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+/* ===== BODY CENTER ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,
+        #ff7a18,
+        #ff9f1c,
+        #ffbf69
+    );
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== FORM BOX ===== */
+.election-form {
+    width: 420px;
+    padding: 30px;
+    border-radius: 18px;
+
+    background: linear-gradient(135deg,
+        #ff6a00,
+        #ff8c00,
+        #ffd000,
+        #a8eb12,
+        #00c9a7,
+        #00b4d8,
+        #0077b6,
+        #5a4fcf
+    );
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+/* ===== HEADING ===== */
+.election-form h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* ===== LABEL ===== */
+.election-form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+/* ===== INPUT ===== */
+.election-form input {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.95);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* ===== INPUT FOCUS ===== */
+.election-form input:focus {
+    box-shadow: 0 0 8px rgba(255,255,255,0.9);
+}
+
+/* ===== BUTTON ===== */
+.election-form button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    background: linear-gradient(45deg, #ff7f00, #ffb347);
+    color: #fff;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+/* ===== BUTTON HOVER ===== */
+.election-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+</style>
+</head>
+<body>
+    {% set messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% set category,message = messages[0] %}
+<script>
+    // Bootstrap alert popup
+    alert("{{ message }}");
+</script>
+{% endif %}
+
+    <button onclick="window.location.href='/admin_home'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+
+<!-- Election Form (Initially hidden) -->
+ <form class="election-form" method="POST" action="/add_election">
+
+    <h3>Add Election</h3>
+    <label>Election Name:</label>
+    <input type="text" name="election_name" placeholder="Enter election name">
+
+    <label>Election Date:</label>
+    <input type="date" name="election_date" >
+
+    <label>Start Time:</label>
+    <input type="time" name="start_time">
+
+    <label>End Time:</label>
+    <input type="time" name="end_time">
+
+    <button type="submit">Submit</button>
+    
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

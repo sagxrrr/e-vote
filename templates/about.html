@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - E Voting System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #333;
+        }
+
+        header {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            border-left: 5px solid #2a5298;
+            padding-left: 10px;
+        }
+
+        .section p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f4f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #2a5298;
+            color: white;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: white;
+            background: rgba(0,0,0,0.6);
+            margin-top: 40px;
+        }
+
+        @media(max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="window.location.href='/'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+
+<header>
+    <h1>E - Voting System</h1>
+    <p>Secure | Transparent | Fast</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>About the System</h2>
+        <p>
+            The E-Voting System is a secure and efficient digital platform designed to conduct elections electronically.
+            It eliminates traditional paper-based voting and ensures transparency, security, and accuracy in the voting process.
+        </p>
+        <p>
+            This system allows registered voters to cast their votes online from anywhere, reducing time,
+            cost, and manual effort while ensuring fairness in elections.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to modernize the election process by implementing secure digital technology that ensures:
+        </p>
+        <p>✔ Transparency in voting</p>
+        <p>✔ Prevention of duplicate voting</p>
+        <p>✔ Fast and accurate result calculation</p>
+        <p>✔ Secure voter authentication</p>
+    </div>
+
+    <div class="section">
+        <h2>Key Features</h2>
+        <div class="features">
+            <div class="card">
+                <h3>Secure Login</h3>
+                <p>Voter authentication using secure credentials to prevent unauthorized access.</p>
+            </div>
+
+            <div class="card">
+                <h3>Real-Time Voting</h3>
+                <p>Instant vote casting with secure database storage and encryption.</p>
+            </div>
+
+            <div class="card">
+                <h3>One Person One Vote</h3>
+                <p>Ensures each voter can vote only once during the election period.</p>
+            </div>
+
+            <div class="card">
+                <h3>Live Results</h3>
+                <p>Automatic and instant result generation after election completion.</p>
+            </div>
+
+            <div class="card">
+                <h3>Admin Dashboard</h3>
+                <p>Admin can manage elections, candidates, and monitor voting activity.</p>
+            </div>
+
+            <div class="card">
+                <h3>Data Security</h3>
+                <p>Encrypted data storage and protection against unauthorized manipulation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Technology Used</h2>
+        <p>✔ Frontend: HTML, CSS, JavaScript</p>
+        <p>✔ Backend: Python (Flask)</p>
+        <p>✔ Database: DBsqlite</p>
+        <p>✔ Security: invisible for ....</p>
+    </div>
+
+    <div class="section">
+        <h2>Why E-Voting?</h2>
+        <p>
+            E-Voting reduces human errors, speeds up the election process, minimizes paper usage,
+            and ensures transparent result declaration. It is especially useful for universities,
+            organizations, societies, and governmental elections.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 E-Voting System | Designed for Secure Digital Elections
+</footer>
+
+</body>
+</html>

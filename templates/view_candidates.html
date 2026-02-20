@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>View Candidates</title>
+    <style>
+        /* Page background */
+body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Total records */
+.total {
+    background: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #2c3e50;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.candidate-table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Table header */
+.candidate-table th {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Table data */
+.candidate-table td {
+    padding: 12px;
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+}
+
+/* Row hover effect */
+.candidate-table tr:hover {
+    background-color: #f1f5ff;
+    transition: 0.3s;
+}
+
+/* Image */
+.candidate-table img {
+    border-radius: 50%;
+    border: 2px solid #764ba2;
+}
+
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='/admin_home'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+<h3> total records:{{ candidates|length }}</h3>
+<h2>Candidate List</h2>
+
+<table class="candidate-table" border="1" cellpadding="10">
+    <tr">
+        <th>id</th>
+        <th>Candidate Name</th>
+        <th>Party Name</th>
+        <th>Party Logo</th>
+        <th>Election Date</th>
+    </tr>
+
+    {% for c in candidates %}
+    <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.candidate_name }}</td>
+        <td>{{ c.party_name }}</td>
+        <td>
+            <img src="data:image/png;base64,{{ c.party_logo }}"
+                 width="20" alt="Party Logo">
+        </td>
+        <td>{{ c.election_date }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

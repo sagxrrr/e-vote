@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* messages */
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* table main */
+.vote-table {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* header */
+.vote-table th {
+    background: #ff9800;   /* orange header */
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* data cells */
+.vote-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+/* row hover */
+.vote-table tr {
+    transition: all 0.3s ease;
+}
+
+.vote-table tr:hover {
+    background: #fff3e0;   /* light orange */
+}
+
+/* party logo */
+.vote-table img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* vote button */
+.vote-table button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background: #ff9800;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.vote-table button:hover {
+    background: #e68900;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transform: translateY(-1px);
+}
+    </style>
+</head>
+
+
+
+<body>
+    <button onclick="window.location.href='/user_home'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+
+<h3 style="color:red;">{{ message }}</h3>
+
+{% set messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% set category,message = messages[0] %}
+<script>
+    // Bootstrap alert popup
+    alert("{{ message }}");
+</script>
+{% endif %}
+
+<table class="vote-table" border="1" cellpadding="10">
+<tr>
+<th>id</th>
+<th>Candidate Name</th>
+<th>Party Name</th>
+<th>Party Logo</th>
+<th>Vote</th>
+</tr>
+
+{% for c in candidates %}
+<tr>
+<td>{{ c.id }}</td>
+<td>{{ c.candidate_name }}</td>
+<td>{{ c.party_name }}</td>
+<td>
+{% if c.party_logo %}
+<img src="data:image/png;base64,{{ c.party_logo }}" width="80">
+{% endif %}
+</td>
+<td>
+<form method="POST" action="/vote_candidate">
+<input type="hidden" name="candidate_id" value="{{ c.id }}">
+<input type="hidden" name="voter_id" value="{{ voter_id }}">
+<input type="hidden" name="candidate_name" value="{{candidate_id}}">
+<button type="submit">Vote</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

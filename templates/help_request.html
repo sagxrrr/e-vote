@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+/* Table Container */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header */
+th {
+    background-color: #4CAF50; /* fresh green color */
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Table Cells */
+td {
+    padding: 12px 15px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Hover effect for rows */
+tr:hover td {
+    background-color: #f1f8f4;
+    transition: 0.3s ease;
+}
+
+/* Alternate row colors */
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Table Title */
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+    </style>
+  </head>
+
+<body>
+
+  <button onclick="window.location.href='/admin_home'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+
+<h2>Help / Support Requests</h2>
+<table border="1" cellpadding="10">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+  </tr>
+
+  {% for req in requests %}
+  <tr>
+    <td>{{ req['sid'] }}</td>
+    <td>{{ req['name'] }}</td>
+    <td>{{ req['email'] }}</td>
+    <td>{{ req['message'] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

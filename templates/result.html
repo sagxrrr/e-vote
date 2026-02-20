@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Election Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+        table {
+            width: 70%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background: #1e3a8a;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='/admin_home'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+
+<h2>Election Result</h2>
+
+<table>
+    <tr>
+        <th>Sr No</th>
+        <th>Candidate ID</th>
+        <th>Candidate Name</th>
+        <th>Total Votes</th>
+    </tr>
+
+    {% for row in results %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ row['candidate_id'] }}</td>
+        <td>{{ row['candidate_name'] }}</td>
+        <td>{{ row['total_votes'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

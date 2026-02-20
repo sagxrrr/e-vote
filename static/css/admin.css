@@ -1,0 +1,227 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    z-index:1000;
+}
+
+.navbar .left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.menu-icon{
+    font-size:22px;
+    cursor:pointer;
+}
+
+.logout{
+    text-decoration:none;
+    background:#ff4b5c;
+    padding:6px 12px;
+    border-radius:6px;
+    color:white;
+    transition:0.3s;
+}
+
+.logout:hover{
+    background:#ff1e3c;
+}
+
+.navbar .right{
+    font-weight:500;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-250px;
+    width:250px;
+    height:100vh;
+    background:linear-gradient(180deg,#141e30,#243b55);
+    padding-top:80px;
+    transition:0.4s;
+    z-index:999;
+}
+
+.sidebar a{
+    display:block;
+    padding:15px 25px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.1);
+    padding-left:35px;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+/* ===== MAIN ===== */
+.main{
+    margin-top:100px;
+    padding:40px;
+}
+
+/* ===== STATS BOX ===== */
+.stats{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.box{
+    flex:1;
+    min-width:220px;
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    font-size:18px;
+}
+
+.box span{
+    display:block;
+    margin-top:10px;
+    font-size:28px;
+    font-weight:600;
+    color:#00e5ff;
+}
+
+/* ===== ACTION CARDS ===== */
+.actions{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.card{
+    flex:1;
+    min-width:200px;
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.card a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255,153,51,0.6);
+}
+
+/* ===== ELECTION SECTION ===== */
+.election{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    text-align:center;
+}
+
+.election button{
+    margin:10px;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.3s;
+}
+
+/* Different button colors */
+.election button:nth-child(1){
+    background:#4caf50;
+}
+.election button:nth-child(2){
+    background:#f44336;
+}
+.election button:nth-child(3){
+    background:#ff9800;
+}
+.election button:nth-child(4){
+    background:#9c27b0;
+}
+
+.election button:hover{
+    transform:scale(1.05);
+    opacity:0.9;
+}
+
+/* Timer */
+#timer{
+    margin-top:20px;
+    font-size:22px;
+    color:#00e5ff;
+}
+
+/* ===== ADD ELECTION BUTTON ===== */
+button[onclick*="add_election"]{
+    margin-top:20px;
+    background:#00bcd4 !important;
+}
+
+button[onclick*="add_election"]:hover{
+    background:#0097a7 !important;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    margin-top:60px;
+    padding:20px;
+    text-align:center;
+    background:rgba(0,0,0,0.5);
+    font-size:14px;
+}
+
+.copy{
+    display:block;
+    margin-top:5px;
+    color:#aaa;
+}

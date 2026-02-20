@@ -1,0 +1,182 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== PREMIUM GREY BLUE ANIMATED BACKGROUND ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #e3edf7, #cfd9df, #dbe9f4, #b0c4de);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: #1f2d3d;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #0d47a1;
+}
+
+.welcome {
+    font-weight: 500;
+    color: #37474f;
+}
+
+.menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+    color: #1f2d3d;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: 500;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    padding: 40px;
+    text-align: center;
+}
+
+/* ===== ELECTION BOX ===== */
+.election-box {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.election-box h2 {
+    margin-bottom: 15px;
+    color: #1565c0;
+}
+
+/* ===== MARQUEE UPDATES ===== */
+.updates {
+    background: rgba(21, 101, 192, 0.08);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color: #0d47a1;
+}
+
+/* ===== VOTE BUTTON ===== */
+.vote-btn {
+    padding: 14px 40px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #607d8b, #1565c0);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 8px 20px rgba(21,101,192,0.25);
+}
+
+.vote-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(21,101,192,0.35);
+}
+
+/* ===== GUIDE SECTION ===== */
+.vote-guide-container {
+    margin-top: 50px;
+}
+
+.main-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #0d47a1;
+}
+
+.guide-card {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    transition: 0.4s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-8px);
+}
+
+.guide-card h2 {
+    margin-bottom: 12px;
+    color: #1565c0;
+}
+
+.guide-card ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #37474f;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+}
+
+.footer p {
+    margin: 5px 0;
+    color: #37474f;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #1565c0;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0d47a1;
+}

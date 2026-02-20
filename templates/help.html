@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help - E Voting System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+            color:#333;
+        }
+
+        header{
+            text-align:center;
+            padding:25px;
+            background: rgba(0,0,0,0.7);
+            color:white;
+        }
+
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:40px auto;
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        h2{
+            color:#2c5364;
+            margin-bottom:15px;
+            border-left:5px solid #2c5364;
+            padding-left:10px;
+        }
+
+        .section{
+            margin-bottom:40px;
+        }
+
+        .section p{
+            margin-bottom:10px;
+            line-height:1.7;
+            color:#555;
+        }
+
+        .steps{
+            background:#f4f9ff;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        .faq-item{
+            margin-bottom:15px;
+            padding:15px;
+            background:#f1f1f1;
+            border-radius:8px;
+        }
+
+        .faq-item h4{
+            margin-bottom:8px;
+            color:#203a43;
+        }
+
+        .contact-box{
+            background:#eaf4ff;
+            padding:20px;
+            border-radius:10px;
+        }
+
+        .contact-box input,
+        .contact-box textarea{
+            width:100%;
+            padding:10px;
+            margin:8px 0;
+            border-radius:5px;
+            border:1px solid #ccc;
+        }
+
+        .contact-box button{
+            padding:10px 20px;
+            background:#2c5364;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .contact-box button:hover{
+            background:#203a43;
+        }
+
+        footer{
+            text-align:center;
+            padding:15px;
+            background:rgba(0,0,0,0.7);
+            color:white;
+            margin-top:40px;
+        }
+
+        @media(max-width:600px){
+            .container{
+                padding:20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="window.location.href='/'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+
+<header>
+    <h1>Help & Support - E Voting System</h1>
+</header>
+
+<div class="container">
+
+    <!-- HOW TO VOTE SECTION -->
+    <div class="section">
+        <h2>How to Cast Your Vote</h2>
+        <div class="steps">
+            <p>1️⃣ Login using your registered username and password.</p>
+            <p>2️⃣ Select the active election from the dashboard.</p>
+            <p>3️⃣ View the list of candidates.</p>
+            <p>4️⃣ Select your preferred candidate.</p>
+            <p>5️⃣ Click on "Submit Vote".</p>
+            <p>6️⃣ You will receive confirmation after successful voting.</p>
+            <p><b>Note:</b> You can vote only once per election.</p>
+        </div>
+    </div>
+
+    <!-- TROUBLESHOOTING SECTION -->
+    <div class="section">
+        <h2>Troubleshooting</h2>
+        <p><b>Problem:</b> Unable to login</p>
+        <p>✔ Ensure you are entering correct username and password.</p>
+        <p>✔ Use "Forgot Password" option if available.</p>
+
+        <p><b>Problem:</b> Vote not submitting</p>
+        <p>✔ Check your internet connection.</p>
+        <p>✔ Make sure election is still active.</p>
+
+        <p><b>Problem:</b> Already voted message</p>
+        <p>✔ System allows only one vote per voter per election.</p>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div class="section">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+
+        <div class="faq-item">
+            <h4>Is my vote secure?</h4>
+            <p>Yes. All votes are encrypted and securely stored in the database.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can I change my vote?</h4>
+            <p>No. Once submitted, a vote cannot be modified.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How are results calculated?</h4>
+            <p>Results are automatically calculated by counting total votes securely stored in the system.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Who can see my vote?</h4>
+            <p>Your vote remains confidential and cannot be viewed by other users.</p>
+        </div>
+
+    </div>
+
+    <!-- CONTACT SUPPORT SECTION -->
+    <div class="section">
+        <h2>Contact Support</h2>
+
+        <div class="contact-box">
+            <!-- FORM ACTION tu Flask madhe add kar -->
+            <form action="/support" method="POST">
+
+                <input type="text" name="s_name" placeholder="Enter Your Name" required>
+
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+
+                <textarea name="message" rows="4" placeholder="Describe Your Issue..." required></textarea>
+
+                <!-- Backend madhe message save karaycha asel tar route create kar -->
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+
+        <p style="margin-top:15px;">
+            <!-- Admin contact details tu ithe dynamic add karu shakto -->
+            📧 Support Email: support@digivote.com  <!-- Replace with real email -->
+            <br>
+            📞 Contact Number: +91-8767414091  <!-- Replace with real number -->
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 E-Voting System | Help & Support Center
+</footer>
+
+</body>
+</html>

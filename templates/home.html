@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DigiVote | Online Voting System</title>
+
+    <!-- CSS CONNECT -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+    <div class="nav-left">
+        <div class="logo-icon">DigiVote</div>
+    </div>
+
+    <div class="nav-links">
+        <a href="/registration">New Registration</a>
+        <a href="/user_login">User Login</a>
+        <a href="/admin_login">Admin Login</a>
+        <a href="/instruction_user">Instruction</a>
+    </div>
+ <div id="overlay" class="menu-icon-right" onclick="toggleSidebar()">☰</div>
+</header>
+
+<!-- ================= SIDEBAR ================= -->
+<aside id="sidebar">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/help">Help</a>
+</aside>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="main-content">
+    <h1>Welcome to DigiVote</h1>
+
+    <div class="box-container">
+        <div class="info-box">
+            <a href="/show_election">
+                <h3>Election</h3>
+                <p>Current Election</p>
+            </a>
+        </div>
+
+        <div class="info-box">
+            <a href="/register_info">
+                <h3>Register Information</h3>
+                <p>User registration details</p>
+            </a>
+        </div>
+
+        <div class="info-box">
+            <a href="/restrictions">
+                <h3>Restrictions </h3>
+                <p>warning and importance </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="marquee-container">
+        <marquee>🗳️ मतदान फक्त सुरू असलेल्या वेळेतच करावे.</marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee>🔐 आपली लॉगिन माहिती सुरक्षित ठेवा.</marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee>⚠️ एकदा मतदान केल्यावर पुन्हा मतदान करता येणार नाही.</marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee>📢 चुकीची माहिती दिल्यास खाते बंद केले जाऊ शकते.</marquee>
+    </div>
+
+ <div class="user-instruction">
+    <h1>🗳️ सूचना आणि सुरक्षा </h1>
+
+    <div class="card">
+        <h2>📌 वापरण्याची पद्धत</h2>
+        <ul>
+            <li>सुरुवातीला नवीन वापरकर्ता असल्यास नोंदणी (Register) करा.</li>
+            <li>नोंदणी झाल्यानंतर लॉगिन करा.</li>
+            <li>उपलब्ध निवडणूक (Election) निवडा.</li>
+            <li>आपल्या पसंतीचा उमेदवार निवडून मतदान करा.</li>
+            <li>मतदान पूर्ण झाल्यानंतर लॉगआउट करा.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>⚠️ महत्त्वाच्या सूचना</h2>
+        <ul>
+            <li>प्रत्येक वापरकर्ता फक्त एकदाच मतदान करू शकतो.</li>
+            <li>आपला पासवर्ड कोणाशीही शेअर करू नका.</li>
+            <li>मतदान करताना इंटरनेट कनेक्शन स्थिर असावे.</li>
+            <li>एकदा मतदान सबमिट केल्यावर बदल करता येणार नाही.</li>
+            <li>चुकीची माहिती दिल्यास खाते बंद केले जाऊ शकते.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔐 सुरक्षा सूचना</h2>
+        <ul>
+            <li>आपले मतदान पूर्णपणे गोपनीय आहे.</li>
+            <li>सर्व माहिती सुरक्षित डेटाबेसमध्ये साठवली जाते.</li>
+            <li>अनधिकृत प्रवेशास सक्त मनाई आहे.</li>
+        </ul>
+    </div>
+</div>
+
+ <div class="marquee-container">
+        <marquee>⚠️ तुमच्या अडचणी व अनुभव आपण help मधील खालील Form सबमिट करून आमच्याशी शेअर करू शकता.</marquee>
+    </div>
+    <div class="thank-you-msg">
+    Thank You For Visiting Our Site 🙏
+</div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-left">
+        <p>📞 Customer support: 8767414091</p>
+        <p>📧 Email: digivotesupport@digivote.com</p>
+    </div>
+
+    <div class="footer-right">
+        
+        <a target="_blank" href="https://www.instagram.com/sagxrrr_07?igsh=YWVyeWl4eWxueDk0" ><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://x.com/adi_9322?s=09"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/sagar-pol-31918a27a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+        <a target="_blank" href="https://www.facebook.com/share/16obAVUBGH/"><i class="fab fa-facebook"></i></a>
+    </div>
+</footer>   
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918767414091?text=Hello%20admin,%20I%20have%20some%20inquiries." 
+   class="whatsapp-float" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- JS CONNECT -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

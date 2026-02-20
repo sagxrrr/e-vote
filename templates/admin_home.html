@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="left">
+        <span class="menu-icon" onclick="toggleSidebar()">☰</span>
+        <a href="/logout_admin" class="logout">Logout</a>
+    </div>
+    <div class="right">
+        Welcome Admin
+    </div>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+    <a href="/admin_home">Home</a>
+    <a href="/result">Result</a>
+    <a href="/view_candidates">Candidate Info</a>
+    <a href="/about">About</a>
+    <a href="#">Help</a>
+    <a href="#">Support</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="box">Total Candidates<br><span id="totalCandidates">{{ candidate_count }}</span></div>
+        <div class="box">Total Voters<br><span id="totalVoters">{{ voter_count }}</span></div>
+    </div>
+
+    <!-- ACTION BOXES -->
+    <div class="actions">
+        <div class="card"><a href="/add_candidate">Add Candidate</a></div>
+        <div class="card"><a href="/view_candidates">View Candidate</a></div>
+        <div class="card"><a href="/result">View Result</a></div>
+    </div>
+
+    <!-- ELECTION CONTROL -->
+    <div class="election">
+        <button onclick="startElection()">Start Election</button>
+        <button onclick="endElection()">End Election</button>
+        <button onclick="resetData()">Reset Data</button>
+        <button onclick="removeAllUsers()">Reset User</button>
+        <button><a href="/help_request"> View Request</a></button>
+
+        <h2 id="timer"></h2>
+    </div>
+    <button onclick="window.location.href='/add_election'" 
+        style=" padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    add election
+</button>
+<!-- <button onclick="window.location.href='/local_info'" 
+        style="padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    local information 
+</button>   -->
+</div>
+<!-- FOOTER -->
+<footer>
+    📞 9322207838 | ✉ admin@digivote.com
+    <span class="copy">© 2026 DigiVote Act</span>
+</footer>
+
+<script src="/static/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login As Admin</title>
+    <style>
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    /* 7-8 color orange mixed gradient */
+    background: linear-gradient(
+        135deg,
+        #ff6a00,
+        #ff8c00,
+        #ffb347,
+        #ffd194,
+        #ff9a9e,
+        #f77062,
+        #fe5196,
+        #f83600
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-box {
+    width: 320px;
+    padding: 35px;
+    border-radius: 16px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+
+    background: rgba(255,255,255,0.85);
+}
+
+.login-box input:focus {
+    box-shadow: 0 0 0 2px #ff9800;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #ff5722, #e65100);
+}
+
+.login-box p {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.login-box p a {
+    color: #fff176;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-box p a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='/'" 
+        style="position:fixed; top:20px; left:20px; padding:10px 15px; 
+               background:#ff9800; color:#fff; border:none; border-radius:8px; 
+               cursor:pointer; box-shadow:0 4px 8px rgba(0,0,0,0.2);">
+    ← Back 
+</button>
+
+    <div class="login-box">
+        <h2>Admin Login </h2>
+        <form method="POST" action="/admin_login" >
+
+    <input type="text" name="username" placeholder="username" required>
+
+    <input type="password" name="password" placeholder="password" required>
+
+    <button type="submit" onclick="window.location.href='/admin_home'">Login</button>
+
+</form>
+        <p> if you forgot your password, contact system administrator.<a href="https://www.instagram.com/ganyaa_044?igsh=Z3NocXlxY3ZteXk1"> msg your administrator</a></p>
+    </div>
+
+</body>
+</html>
